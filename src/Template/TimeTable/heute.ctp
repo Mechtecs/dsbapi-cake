@@ -27,16 +27,21 @@ $this->layout = "default";
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>
-    </title>
+    <title><?php echo date('d.m.Y'); ?> - Vertretungsplan</title>
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
 </head>
 <body class="home">
 <?php
-var_dump($heute);
+foreach($motd as $mo){
+    echo $mo->txt;
+    echo "<BR>";
+}
+foreach($payload as $h){
+    var_dump($h);
+    echo "<BR>";
+}
 ?>
 </body>
 </html>

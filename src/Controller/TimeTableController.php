@@ -8,7 +8,8 @@ use App\Model\Table\VertretungTable;
  * TimeTable Controller
  *
  * @property \App\Model\Table\TimeTable $TimeTable
- * @property \App\Model\Table\VertretungTable $VertretungTable
+ * @property \App\Model\Table\VertretungTable $Vertretung
+ * @property \App\Model\Table\DayMessageTable $DayMessage
  */
 class TimeTableController extends AppController
 {
@@ -16,8 +17,10 @@ class TimeTableController extends AppController
     public function heute(){
         $data = array();
         $this->loadModel('Vertretung');
-        $heute = $this->Vertretung->find('all')->where('Vertretung.datum = current_date()')->all();
-        $this->set(compact('heute'));
+        $this->loadModel('DayMessage');
+        $payload = $this->Vertretung->find('all')->where('Vertretung.datum = current_date()')->all();
+        $motd = $this->DayMessage->find('all')->where('datum = current_date()')->all();
+        $this->set(compact('payload', 'motd'));
     }
 
     public function morgen(){
