@@ -2,21 +2,26 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use App\Model\Table\DayMessageTable;
+use App\Model\Table\VertretungTable;
 /**
  * TimeTable Controller
  *
- * @property \App\Model\Table\TimeTableTable $TimeTable
+ * @property \App\Model\Table\TimeTable $TimeTable
+ * @property \App\Model\Table\VertretungTable $VertretungTable
  */
 class TimeTableController extends AppController
 {
 
     public function heute(){
-      $this->render();
+        $data = array();
+        $this->loadModel('Vertretung');
+        $heute = $this->Vertretung->find('all')->where('Vertretung.datum = current_date()')->all();
+        $this->set(compact('heute'));
     }
 
     public function morgen(){
-      $this->render();
+
     }
 
     /**

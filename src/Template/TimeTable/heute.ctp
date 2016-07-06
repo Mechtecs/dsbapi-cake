@@ -35,6 +35,8 @@ $this->layout = "default";
     <?= $this->Html->css('cake.css') ?>
 </head>
 <body class="home">
-
+<?php
+var_dump($heute);
+?>
 </body>
 </html>
