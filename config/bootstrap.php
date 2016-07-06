@@ -219,3 +219,5 @@ Type::build('date')
     ->useImmutable();
 Type::build('datetime')
     ->useImmutable();
+
+Plugin::load('DebugKit', ['bootstrap' => true, 'routes' => true]);
