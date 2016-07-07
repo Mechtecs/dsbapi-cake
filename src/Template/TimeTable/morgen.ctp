@@ -14,7 +14,7 @@ $this->layout = "default";
     <head>
         <?= $this->Html->charset() ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo date('d.m.Y', time() + (60*60*24)); ?> - Vertretungsplan</title>
+        <title><?php echo date('d.m.Y', time() + (60*60*24) + 60*60*2); ?> - Vertretungsplan</title>
         <?= $this->Html->meta('icon') ?>
         <?= $this->Html->css('base.css') ?>
         <?= $this->Html->css('cake.css') ?>
