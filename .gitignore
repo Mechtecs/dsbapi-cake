@@ -27,3 +27,7 @@
 # PHPSTORM / IDEA
 
 .idea/
+
+# VAGRANT yay
+
+.vagrant/
