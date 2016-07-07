@@ -41,7 +41,7 @@ $this->layout = "default";
                 foreach($payload as $h):
                 ?>
                 <tr>
-                    <td>N/A</td>
+                    <td><?php echo $h->klasse->bezeichnung; ?></td>
                     <td><?php echo $h->stunde; ?></td>
                     <td><?php echo $h->art; ?></td>
                     <td><?php echo $h->fach; ?></td>

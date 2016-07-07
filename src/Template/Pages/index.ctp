@@ -35,6 +35,6 @@ $this->layout = "default";
     <?= $this->Html->css('cake.css') ?>
 </head>
 <body class="home">
-  <p>Vertretungsplan für den <a href="/heute">heutigen</a> Tag, oder für den <a href="/morgen">morgigen</a> Tag?</p>
+  <p>Vertretungsplan f&uuml;r den <a href="/heute">heutigen</a> Tag, oder f&uuml;r den <a href="/morgen">morgigen</a> Tag?</p>
 </body>
 </html>

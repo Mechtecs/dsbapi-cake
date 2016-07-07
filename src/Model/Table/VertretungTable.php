@@ -33,6 +33,11 @@ class VertretungTable extends Table
         $this->table('vertretung');
         $this->displayField('id');
         $this->primaryKey('id');
+        $this->hasOne('Klasse', [
+            'className' => 'Klasse',
+            'foreignKey' => 'id',
+            'bindingKey' => 'id_klasse'
+        ]);
     }
 
     /**

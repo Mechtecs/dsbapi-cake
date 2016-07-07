@@ -27,7 +27,7 @@ class TimeTableController extends AppController
         $data = array();
         $this->loadModel('Vertretung');
         $this->loadModel('DayMessage');
-        $payload = $this->Vertretung->find('all')->where('Vertretung.datum = (current_date() + INTERVAL 1 DAY)')->all();
+        $payload = $this->Vertretung->find('all')->contain(['Klasse'])->where('Vertretung.datum = (current_date() + INTERVAL 1 DAY)')->all();
         $motd = $this->DayMessage->find('all')->where('datum = (current_date() + INTERVAL 1 DAY)')->all();
         $this->set(compact('payload', 'motd'));
     }
