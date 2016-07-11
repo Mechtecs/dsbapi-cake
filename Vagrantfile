@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
 
     config.vm.provision "shell", path: "provisioner.sh"
 
-    config.vm.hostname = $hostname + ".dev"
+    config.vm.hostname = $hostname + ".kek"
 
     config.vm.network "private_network", type: "dhcp"
 
@@ -22,5 +22,5 @@ Vagrant.configure(2) do |config|
     end
 
     config.landrush.enabled = true
-    config.landrush.tld = 'dev'
+    config.landrush.tld = 'kek'
 end
