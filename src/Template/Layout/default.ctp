@@ -58,12 +58,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <li class="<?= (strcmp("/heute", $this->request->here) == 0)? 'active' : '' ?>"><a href="/heute">Heute <span class="sr-only">(current)</span></a></li>
                         <li class="<?= (strcmp("/morgen", $this->request->here) == 0)? 'active' : '' ?>"><a href="/morgen">Morgen</a></li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="https://github.com/Mechtecs/dsbapi-cake">GitHub</a></li>
                     </ul>
