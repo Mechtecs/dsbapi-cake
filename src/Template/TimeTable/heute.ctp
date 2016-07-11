@@ -54,13 +54,13 @@ $this->layout = "default";
                 foreach($payload as $h):
                 ?>
                 <tr>
-                    <td><?php echo $h->klasse->bezeichnung; ?></td>
-                    <td><?php echo $h->stunde; ?></td>
-                    <td><?php echo $h->art; ?></td>
-                    <td><?php echo $h->fach; ?></td>
-                    <td><?php echo $h->raum; ?></td>
-                    <td><?php echo $h->text; ?></td>
-                    <td><?php echo $h->grund; ?></td>
+                    <td><?= $h->klasse->bezeichnung; ?></td>
+                    <td><?= $h->stunde; ?></td>
+                    <td><?= $h->art; ?></td>
+                    <td><?= $h->fach; ?></td>
+                    <td><?= $h->raum; ?></td>
+                    <td><?= $h->text; ?></td>
+                    <td><?= $h->grund; ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
