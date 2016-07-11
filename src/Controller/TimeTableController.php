@@ -4,7 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use App\Model\Table\DayMessageTable;
 use App\Model\Table\VertretungTable;
-/**
+/*
  * TimeTable Controller
  *
  * @property \App\Model\Table\TimeTable $TimeTable
